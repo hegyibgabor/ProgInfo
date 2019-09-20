@@ -4,14 +4,13 @@ using namespace std;
 
 int main()
 {
-    int i = 1;
-    int nulla = 1;
-    while (i!=0) {
-    
-    nulla++;
-    i = a << 1;
-    }
-    cout << nulla;
-    
-        
+    int a = 6;
+    int b = 9;
+
+    b += a; // b = 15
+    a = b - a; // a = 9
+    b = b - a; // b = 6
+
+   
+    cout << "Ennyi a b = " << b << " és ennyi az a = "<< a << endl; 
 }
