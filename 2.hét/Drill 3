@@ -1,0 +1,70 @@
+#include <iostream>
+#include "std_lib_facilities.h"
+using namespace std;
+
+int main() {
+
+    string knev2;
+    string knev;
+    cout << "*Ird be azt a nevet akinek irni akarsz*\n" << endl;
+    cin >> knev;
+    system("cls");
+    cout << "Kedves " << knev << ", hogy vagy? " << endl
+         << "En jol, tegnap fialt meg a kutyam\n" << endl;
+
+    cout << "*Ird be egy masik baratod nevet!*\n" << endl;
+    cin >> knev2;
+    system("cls");
+    cout << "Nagyon hianyzik " << knev2 << ".\n" << "Te lattad mostanaban?" << endl;
+
+    char f;
+    char n;
+    string nem;
+    cout << "A baratod ferfi vagy no? f/n" << endl;
+    cin >> nem;
+    system("cls");
+    if (nem=="f")
+    {
+        cout << "Ha latod a palit, udvozlom." << endl;
+    }
+    if (nem=="n")
+    {
+        cout << "Ha latod a csaj havert, udvozlom." << endl;
+    }
+
+    int kor;
+    int korswitch;
+    cout << "Hany eves a baratod?" << endl;
+    cin >> kor;
+    system("cls");
+    if (kor < 0 || kor == 0 || kor == 110 || kor > 110)
+	{
+		simple_error("Viccelsz");
+	}
+
+	if (kor == 17)
+	{
+		korswitch = 1;
+	}
+
+	if (kor < 12)
+	{
+		korswitch = 2;
+	}
+
+	if (kor > 70)
+	{
+		korswitch = 3;
+	}
+
+	switch (korswitch)
+	{
+		case 1: cout << "Kovi evben mar szavazhatsz\n"; break;
+		case 2: cout << "Kovetkezo evben leszel " << kor+1 << ".\n"; break;
+		case 3: cout << "Remelem elvezed nyugdijazasod.\n"; break;
+	}
+
+	cout << "Udv,\n\nGabor\n\n";
+
+
+}
