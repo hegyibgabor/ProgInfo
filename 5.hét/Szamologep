@@ -1,0 +1,47 @@
+#include <iostream>
+#include <vector>
+#include <stdlib.h>
+using namespace std;
+
+int main() {
+    double num1 = 0;
+    double num2 = 0;
+    double eredmeny = 0;
+    char muvelet;
+    vector<double> eredmenyek;
+
+    cout << "Milyen muveletet szeretnel elvegeztetni?" << endl;
+    cin >> muvelet;
+    cout << "Milyen ket szammal akarod ezt elvegezni?(Enter az elso szam utan)" << endl;
+    cin >> num1 >> num2;
+
+    switch(muvelet) {
+        case '+': eredmeny = num1+num2; break;
+        case '-': eredmeny = num1-num2; break;
+        case '*': eredmeny = num1*num2; break;
+        case '/': eredmeny = num1/num2; break;
+        case '|': return 0; break;
+    }
+
+    system("cls");
+    cout << eredmeny;
+    eredmenyek.push_back(eredmeny);
+
+
+    while(1) {
+        cin >> muvelet >> num1;
+
+        switch(muvelet) {
+            case '+': eredmeny = eredmeny+num1; break;
+            case '-': eredmeny = eredmeny-num1; break;
+            case '*': eredmeny = eredmeny*num1; break;
+            case '/': eredmeny = eredmeny/num1; break;
+            case '|': return 0; break;
+        }
+
+        cout << eredmeny;
+        eredmenyek.push_back(eredmeny);
+
+    }
+
+}
